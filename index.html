@@ -306,6 +306,7 @@
 <blockquote>
 <p>《论小于给定数值的素数个数》黎曼论文</p>
 </blockquote>
+<p>$a = b + c$</p>
 <h3 id="梅森素数"><a href="#梅森素数" class="headerlink" title="梅森素数"></a>梅森素数</h3><blockquote>
 <p>所谓梅森数，是指形如2p－1的一类数，其中指数p是素数，常记为Mp 。如果梅森数是素数，就称为梅森素数。  </p>
 </blockquote>
@@ -337,9 +338,11 @@
 </li>
 <li><p>$ζ(s)$的其余非平凡零点根据黎曼猜想均在$\frac{1}{2}+bi$上。而这些零点的分布与质数的分布有关。</p>
 </li>
-<li><p>令$s=2$,则<br>$$ζ(2)=1+\frac{1}{2^2}+\frac{1}{3^2}+\frac{1}{4^2}+\frac{1}{5^2}+\frac{1}{6^2}+\frac{1}{7^2}+…$$<br>$ζ(2)=\frac{\pi^2}{6}$(由欧拉求得)</p>
+<li><p>令$s=2$,则</p>
+<script type="math/tex; mode=display">ζ(2)=1+\frac{1}{2^2}+\frac{1}{3^2}+\frac{1}{4^2}+\frac{1}{5^2}+\frac{1}{6^2}+\frac{1}{7^2}+...</script><p>$ζ(2)=\frac{\pi^2}{6}$(由欧拉求得)</p>
 </li>
-<li><p>令$s=3$,则<br>$$ζ(3)=1+\frac{1}{2^3}+\frac{1}{3^3}+\frac{1}{4^3}+\frac{1}{5^3}+\frac{1}{6^3}+\frac{1}{7^3}+…$$<br>$ζ(3)\approx1.2020569…$</p>
+<li><p>令$s=3$,则</p>
+<script type="math/tex; mode=display">ζ(3)=1+\frac{1}{2^3}+\frac{1}{3^3}+\frac{1}{4^3}+\frac{1}{5^3}+\frac{1}{6^3}+\frac{1}{7^3}+...</script><p>$ζ(3)\approx1.2020569…$</p>
 <blockquote>
 <p>有这样一个实验，随机给出3个数，设给出的组数足够大且为N，其中3个数均互质的个数为M，那么有<br>$\frac{N}{M}=ζ(3)\approx1.2020569$</p>
 </blockquote>
@@ -347,13 +350,16 @@
 </ul>
 <p>通过解析延拓，可以把$ζ(s)$函数的定义域从$x=1$的右边区域延伸到整个复平面（除去$1+0i$这个点）。</p>
 <ul>
-<li><p>令$s=-1$,则<br>$$ζ(-1)=1+2+3+4+5+6+7+8+…$$<br>且有<br>$$-\frac{1}{12}=1+2+3+4+5+6+7+8+…$$<br>这里我们只讨论Zeta函数得到的结果，而对证明进行忽略。</p>
+<li><p>令$s=-1$,则</p>
+<script type="math/tex; mode=display">ζ(-1)=1+2+3+4+5+6+7+8+...</script><p>且有</p>
+<script type="math/tex; mode=display">-\frac{1}{12}=1+2+3+4+5+6+7+8+...</script><p>这里我们只讨论Zeta函数得到的结果，而对证明进行忽略。</p>
 <blockquote>
 <p>实际上证明有多种，且此不同寻常的结论已广泛应用于数学与物理领域。</p>
 </blockquote>
 </li>
-<li><p>令$s=-3$,则<br>$$ζ(-3)=1+2^3+3^3+4^3+5^3+6^3+7^3+…$$<br>且有<br>$$\frac{1}{120}=1+2^3+3^3+4^3+5^3+6^3+7^3+…$$</p>
-<blockquote>
+<li><p>令$s=-3$,则</p>
+<script type="math/tex; mode=display">ζ(-3)=1+2^3+3^3+4^3+5^3+6^3+7^3+...</script><p>且有</p>
+<script type="math/tex; mode=display">\frac{1}{120}=1+2^3+3^3+4^3+5^3+6^3+7^3+...</script><blockquote>
 <p>欧拉在这方面做出了归纳。这种试图让某个数字代替无穷级数和的想法，真让人感到赞叹。对于这些值我们知之甚少。</p>
 </blockquote>
 </li>
@@ -735,7 +741,24 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 
 
 

@@ -356,16 +356,14 @@
 
       
         
-          
-            <h3 id="new运算符"><a href="#new运算符" class="headerlink" title="new运算符"></a>new运算符</h3><p>new创建的东西都是没有名字的，只能用指针去访问。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> * psome = <span class="keyword">new</span> <span class="keyword">int</span> [<span class="number">10</span>]<span class="comment">//这里用new创建了一个数组，只能通过指针访问。</span></span><br></pre></td></tr></table></figure></p>
-<p>访问方式为<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">psome[<span class="number">0</span>] <span class="comment">//这种数组方式</span></span><br></pre></td></tr></table></figure></p>
-<p>或者<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*(psome+<span class="number">1</span>) <span class="comment">//指针的访问方式</span></span><br></pre></td></tr></table></figure></p>
-<h5 id="因为我是在处理生成一棵二叉树的时候，遇到这个问题。"><a href="#因为我是在处理生成一棵二叉树的时候，遇到这个问题。" class="headerlink" title="因为我是在处理生成一棵二叉树的时候，遇到这个问题。"></a>因为我是在处理生成一棵二叉树的时候，遇到这个问题。</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">int</span> value;</span><br><span class="line">  Node* left;</span><br><span class="line">  Node* right;  <span class="comment">//这里的指针需不需要=NULL。</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>然后用new运算符动态生成一个节点<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Node * temp = <span class="keyword">new</span> Node;</span><br></pre></td></tr></table></figure></p>
-<p>然后delete<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> temp;</span><br></pre></td></tr></table></figure></p>
-<h4 id="给定一个数组，然后生成一颗二叉树"><a href="#给定一个数组，然后生成一颗二叉树" class="headerlink" title="给定一个数组，然后生成一颗二叉树"></a>给定一个数组，然后生成一颗二叉树</h4><p><strong>give an array of integers to build a binary search tree.</strong><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">int</span> value;</span><br><span class="line">  Node* left;</span><br><span class="line">  Node* right;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreatTree</span><span class="params">(Node* P)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> <span class="built_in">array</span>[<span class="number">10</span>]=&#123;<span class="number">10</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">23</span>,<span class="number">94</span>,<span class="number">22</span>,<span class="number">75</span>,<span class="number">45</span>,<span class="number">33</span>,<span class="number">17</span>&#125;;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">  &#123;</span><br><span class="line">    Node* temp = <span class="keyword">new</span> Node;</span><br><span class="line">    creat(temp);  <span class="comment">//temp不能使用多次吧。</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-          
+          <h3 id="new运算符"><a href="#new运算符" class="headerlink" title="new运算符"></a>new运算符</h3><p>new创建的东西都是没有名字的，只能用指针去访问。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/03/08/code-1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -504,71 +502,16 @@
 
       
         
-          
-            <h3 id="黎曼函数"><a href="#黎曼函数" class="headerlink" title="黎曼函数"></a>黎曼函数</h3><p>质数。<br>复数分析。<br>证明黎曼猜想有可能可以知道质数分布的规律。</p>
+          <h3 id="黎曼函数"><a href="#黎曼函数" class="headerlink" title="黎曼函数"></a>黎曼函数</h3><p>证明黎曼猜想有可能可以知道质数分布的规律。</p>
 <blockquote>
-<p>《论小于给定数值的素数个数》黎曼论文</p>
-</blockquote>
-<p>$a = b + c$</p>
-<h3 id="梅森素数"><a href="#梅森素数" class="headerlink" title="梅森素数"></a>梅森素数</h3><blockquote>
-<p>所谓梅森数，是指形如2p－1的一类数，其中指数p是素数，常记为Mp 。如果梅森数是素数，就称为梅森素数。  </p>
-</blockquote>
-<p>梅森素数是否无穷，且分布规律是什么？</p>
-<h3 id="哥德巴赫猜想"><a href="#哥德巴赫猜想" class="headerlink" title="哥德巴赫猜想"></a>哥德巴赫猜想</h3><p>猜想内容：任意大于2的偶数都可以写做两个素（质）数之和。</p>
-<h3 id="费马大定律"><a href="#费马大定律" class="headerlink" title="费马大定律"></a>费马大定律</h3><p>$x^n + y^n = z^n$（$n $&gt;2时，没有正整数解）</p>
-<h3 id="千禧问题"><a href="#千禧问题" class="headerlink" title="千禧问题"></a>千禧问题</h3><ul>
-<li><p><strong>P=NP?</strong></p>
-<blockquote>
-<p>即能用多项式时间验证解的问题是否能在多项式时间内找出解？（我觉得不行）</p>
-</blockquote>
-</li>
-<li><p>霍奇猜想</p>
-</li>
-<li><strong>庞加莱猜想</strong>（已解决）</li>
-<li><strong>黎曼假设</strong>（本文核心）<blockquote>
-<p>希尔伯特认为黎曼猜想的解决能够使我们严格地去解决哥德巴赫猜想，以及孪生素数猜想（存在无穷多相差为2的素数）。</p>
-</blockquote>
-</li>
-<li>杨-米尔斯规范场存在性和质量间隔假设</li>
-<li>NS方程解的存在性与光滑性</li>
-<li>贝赫和斯维讷通-戴尔猜想<h4 id="黎曼Zeta函数"><a href="#黎曼Zeta函数" class="headerlink" title="黎曼Zeta函数"></a>黎曼Zeta函数</h4>$ζ(s)= 1+ \frac{1}{1^s}+\frac{1}{2^s}+\frac{1}{3^s}+\frac{1}{4^s}+…$</li>
-</ul>
-<p>或写做</p>
-<p>$ζ(s)=\sum_{i=1}^{\infty}(\frac{1}{i^s})$</p>
-<p>一些已知结论    </p>
-<ul>
-<li><p>对于$ζ(s)$函数，当$s$为负偶数时，$ζ(s)=0$。这些令$ζ(s)=0$的点，称为平凡零点。（表示为复平面上）</p>
-</li>
-<li><p>$ζ(s)$的其余非平凡零点根据黎曼猜想均在$\frac{1}{2}+bi$上。而这些零点的分布与质数的分布有关。</p>
-</li>
-<li><p>令$s=2$,则</p>
-<script type="math/tex; mode=display">ζ(2)=1+\frac{1}{2^2}+\frac{1}{3^2}+\frac{1}{4^2}+\frac{1}{5^2}+\frac{1}{6^2}+\frac{1}{7^2}+...</script><p>$ζ(2)=\frac{\pi^2}{6}$(由欧拉求得)</p>
-</li>
-<li><p>令$s=3$,则</p>
-<script type="math/tex; mode=display">ζ(3)=1+\frac{1}{2^3}+\frac{1}{3^3}+\frac{1}{4^3}+\frac{1}{5^3}+\frac{1}{6^3}+\frac{1}{7^3}+...</script><p>$ζ(3)\approx1.2020569…$</p>
-<blockquote>
-<p>有这样一个实验，随机给出3个数，设给出的组数足够大且为N，其中3个数均互质的个数为M，那么有<br>$\frac{N}{M}=ζ(3)\approx1.2020569$</p>
-</blockquote>
-</li>
-</ul>
-<p>通过解析延拓，可以把$ζ(s)$函数的定义域从$x=1$的右边区域延伸到整个复平面（除去$1+0i$这个点）。</p>
-<ul>
-<li><p>令$s=-1$,则</p>
-<script type="math/tex; mode=display">ζ(-1)=1+2+3+4+5+6+7+8+...</script><p>且有</p>
-<script type="math/tex; mode=display">-\frac{1}{12}=1+2+3+4+5+6+7+8+...</script><p>这里我们只讨论Zeta函数得到的结果，而对证明进行忽略。</p>
-<blockquote>
-<p>实际上证明有多种，且此不同寻常的结论已广泛应用于数学与物理领域。</p>
-</blockquote>
-</li>
-<li><p>令$s=-3$,则</p>
-<script type="math/tex; mode=display">ζ(-3)=1+2^3+3^3+4^3+5^3+6^3+7^3+...</script><p>且有</p>
-<script type="math/tex; mode=display">\frac{1}{120}=1+2^3+3^3+4^3+5^3+6^3+7^3+...</script><blockquote>
-<p>欧拉在这方面做出了归纳。这种试图让某个数字代替无穷级数和的想法，真让人感到赞叹。对于这些值我们知之甚少。</p>
-</blockquote>
-</li>
-</ul>
-
-          
+<p>《论小于给定数值的素数个数》黎曼论文<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/03/02/article/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -707,22 +650,14 @@
 
       
         
-          
-            <h3 id="the-History-of-my-name"><a href="#the-History-of-my-name" class="headerlink" title="the History of my name"></a>the History of my name</h3><p>简言之，我为什么叫Hermesfish的由来。</p>
-<p><strong>Hermesfish直译就是赫尔墨斯的鱼。</strong></p>
-<p>起初，我是在《博弈论战略分析入门》里面看到的一个书底下的注释</p>
-<blockquote>
-<p>Hermes是拥有财富的神。(一不小心就透露了我的爱财本性)。</p>
-</blockquote>
-<p>更加因为本人英语算是比较捉急的那种，觉得英文还蛮好看的。嗯，所以Hermes就是我的QQ网名。</p>
-<p>然后，往深处想。叫“财神”这么直白肯定不太好，想要加个后缀啥的。后缀最令人容易想到的就是“薛定谔的猫”。</p>
-<p>为啥容易想到这个，因为猫很迷啊。</p>
-<p>既然我那么喜欢猫，那就干脆叫做什么什么的鱼好了，猫爱吃鱼。</p>
-<p>按照这个路子，我应该取名叫做“爱因斯坦的鱼”。:)</p>
-<p>我倒是很崇拜爱因斯他，但是因为已经有了Hermes，所以暂时就不用他了。</p>
-<p>基于以上这些理由，我开始滥用Hermesfish这个网名，甚至打算一生一名了。所以我的Coding账户多叫这个名字了。</p>
-
-          
+          <h3 id="the-History-of-my-name"><a href="#the-History-of-my-name" class="headerlink" title="the History of my name"></a>the History of my name</h3><p>简言之，我为什么叫Hermesfish的由来。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/03/01/the-history-of-my-name/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

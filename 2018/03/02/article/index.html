@@ -1,63 +1,20 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="a personal blog, a devoted heart."><title>黎曼函数 | Hermesfish的猫圈</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/7.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><style>#forkongithub a{background:#125;color:#fff;text-decoration:none;font-family:arial,sans-serif;text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;transition:0.5s;}#forkongithub a:hover{background:#c11;color:#fff;}#forkongithub a::before,#forkongithub a::after{content:"";width:100%;display:block;position:absolute;top:1px;left:0;height:1px;background:#fff;}#forkongithub a::after{bottom:1px;top:auto;}@media screen and (min-width:800px){#forkongithub{position:absolute;display:block;top:0;right:0;width:200px;overflow:hidden;height:200px;z-index:9999;}#forkongithub a{width:200px;position:absolute;top:60px;right:-60px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);box-shadow:4px 4px 10px rgba(0,0,0,0.8);}}</style><span id="forkongithub"><a href="https://github.com/Hermesfish">Fork me on GitHub</a></span></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">黎曼函数</h1><a id="logo" href="/.">Hermesfish的猫圈</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">黎曼函数</h1><div class="post-meta">Mar 2, 2018<span> | </span><span class="category"><a href="/categories/午后茶谈/">午后茶谈</a></span></div><div class="post-content"><p>证明黎曼猜想有可能可以知道质数分布的规律。</p>
-<blockquote>
-<p>《论小于给定数值的素数个数》黎曼论文<br><a id="more"></a></p>
-<h4 id="梅森素数"><a href="#梅森素数" class="headerlink" title="梅森素数"></a>梅森素数</h4><p>所谓梅森数，是指形如2p－1的一类数，其中指数p是素数，常记为Mp 。如果梅森数是素数，就称为梅森素数。  </p>
-</blockquote>
-<p>梅森素数是否无穷，且分布规律是什么？</p>
-<h4 id="哥德巴赫猜想"><a href="#哥德巴赫猜想" class="headerlink" title="哥德巴赫猜想"></a>哥德巴赫猜想</h4><p>猜想内容：任意大于2的偶数都可以写做两个素（质）数之和。</p>
-<h4 id="费马大定律"><a href="#费马大定律" class="headerlink" title="费马大定律"></a>费马大定律</h4><p>$x^n + y^n = z^n$（$n $&gt;2时，没有正整数解）</p>
-<h4 id="千禧问题"><a href="#千禧问题" class="headerlink" title="千禧问题"></a>千禧问题</h4><ul>
-<li><p><strong>P=NP?</strong></p>
-<blockquote>
-<p>即能用多项式时间验证解的问题是否能在多项式时间内找出解？（我觉得不行）</p>
-</blockquote>
-</li>
-<li><p>霍奇猜想</p>
-</li>
-<li><strong>庞加莱猜想</strong>（已解决）</li>
-<li><strong>黎曼假设</strong>（本文核心）<blockquote>
-<p>希尔伯特认为黎曼猜想的解决能够使我们严格地去解决哥德巴赫猜想，以及孪生素数猜想（存在无穷多相差为2的素数）。</p>
-</blockquote>
-</li>
-<li>杨-米尔斯规范场存在性和质量间隔假设</li>
-<li>NS方程解的存在性与光滑性</li>
-<li>贝赫和斯维讷通-戴尔猜想<h5 id="黎曼Zeta函数"><a href="#黎曼Zeta函数" class="headerlink" title="黎曼Zeta函数"></a>黎曼Zeta函数</h5>$ζ(s)= 1+ \frac{1}{1^s}+\frac{1}{2^s}+\frac{1}{3^s}+\frac{1}{4^s}+…$</li>
-</ul>
-<p>或写做</p>
-<p>$ζ(s)=\sum_{i=1}^{\infty}(\frac{1}{i^s})$</p>
-<p>一些已知结论    </p>
-<ul>
-<li><p>对于$ζ(s)$函数，当$s$为负偶数时，$ζ(s)=0$。这些令$ζ(s)=0$的点，称为平凡零点。（表示为复平面上）</p>
-</li>
-<li><p>$ζ(s)$的其余非平凡零点根据黎曼猜想均在$\frac{1}{2}+bi$上。而这些零点的分布与质数的分布有关。</p>
-</li>
-<li><p>令$s=2$,则</p>
-<script type="math/tex; mode=display">ζ(2)=1+\frac{1}{2^2}+\frac{1}{3^2}+\frac{1}{4^2}+\frac{1}{5^2}+\frac{1}{6^2}+\frac{1}{7^2}+...</script><p>$ζ(2)=\frac{\pi^2}{6}$(由欧拉求得)</p>
-</li>
-<li><p>令$s=3$,则</p>
-<script type="math/tex; mode=display">ζ(3)=1+\frac{1}{2^3}+\frac{1}{3^3}+\frac{1}{4^3}+\frac{1}{5^3}+\frac{1}{6^3}+\frac{1}{7^3}+...</script><p>$ζ(3)\approx1.2020569…$</p>
-<blockquote>
-<p>有这样一个实验，随机给出3个数，设给出的组数足够大且为N，其中3个数均互质的个数为M，那么有<br>$\frac{N}{M}=ζ(3)\approx1.2020569$</p>
-</blockquote>
-</li>
-</ul>
-<p>通过解析延拓，可以把$ζ(s)$函数的定义域从$x=1$的右边区域延伸到整个复平面（除去$1+0i$这个点）。</p>
-<ul>
-<li><p>令$s=-1$,则</p>
-<script type="math/tex; mode=display">ζ(-1)=1+2+3+4+5+6+7+8+...</script><p>且有</p>
-<script type="math/tex; mode=display">-\frac{1}{12}=1+2+3+4+5+6+7+8+...</script><p>这里我们只讨论Zeta函数得到的结果，而对证明进行忽略。</p>
-<blockquote>
-<p>实际上证明有多种，且此不同寻常的结论已广泛应用于数学与物理领域。</p>
-</blockquote>
-</li>
-<li><p>令$s=-3$,则</p>
-<script type="math/tex; mode=display">ζ(-3)=1+2^3+3^3+4^3+5^3+6^3+7^3+...</script><p>且有</p>
-<script type="math/tex; mode=display">\frac{1}{120}=1+2^3+3^3+4^3+5^3+6^3+7^3+...</script><blockquote>
-<p>欧拉在这方面做出了归纳。这种试图让某个数字代替无穷级数和的想法，真让人感到赞叹。对于这些值我们知之甚少。</p>
-</blockquote>
-</li>
-</ul>
-</div><div class="tags"><a href="/tags/math/">math</a><a href="/tags/不靠谱分析/">不靠谱分析</a></div><div class="post-nav"><a class="pre" href="/2018/03/08/code-1/">指针与new运算符</a><a class="next" href="/2018/03/01/the-history-of-my-name/">Hermesfish命名的由来</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/code幻想曲/">code幻想曲</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/午后茶谈/">午后茶谈</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/野外漫步/">野外漫步</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/math/" style="font-size: 15px;">math</a> <a href="/tags/不靠谱分析/" style="font-size: 15px;">不靠谱分析</a> <a href="/tags/code/" style="font-size: 15px;">code</a> <a href="/tags/pointer/" style="font-size: 15px;">pointer</a> <a href="/tags/Hermesfish/" style="font-size: 15px;">Hermesfish</a> <a href="/tags/cat/" style="font-size: 15px;">cat</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/03/08/code-1/">指针与new运算符</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/02/article/">黎曼函数</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/01/the-history-of-my-name/">Hermesfish命名的由来</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">Hermesfish的猫圈.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.css"><script type="text/x-mathjax-config">MathJax.Hub.Config({
-  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-  });
-</script><script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
+extends partial/layout
+
+block site_title
+    != page.title + " · " + config.title
+
+block description
+    - var desc = page.desc || page.title + ' - ' + config.author;
+    meta(name="description", content=desc)
+
+block container
+    include mixins/post
+    +post(page)
+
+block pagination
+    include mixins/paginator
+    +post()
+    include partial/comment
+
+block copyright
+    include partial/copyright

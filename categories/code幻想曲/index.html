@@ -180,59 +180,6 @@
 </div>
 
 
-	<div class="m0 py2">
-	<div class="md-col-12">
-		<div class="overflow-hidden bg-white rounded">
-			<div class="m1 p2 white">
-				<div class="clearfix">
-					<div class="left">
-						<h1 class="h2 m0"><a href="/2018/03/08/code-1/" class="black">
-						指针与new运算符
-						</a></h1>
-					</div>
-					<div class="right"><span class="h6 muted black">
-						Mar 8 2018
-					</span></div>
-				</div>
-			</div>
-			<div class="p2 border-top">
-				<p><img src="http://p5kt0ilhh.bkt.clouddn.com/%E5%96%B5%E6%B3%A2.gif" alt="喵波"></p>
-<h5 id="new运算符"><a href="#new运算符" class="headerlink" title="new运算符"></a>new运算符</h5><p>new创建的东西都是没有名字的，只能用指针去访问。<br><a id="more"></a><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> * psome = <span class="keyword">new</span> <span class="keyword">int</span> [<span class="number">10</span>]<span class="comment">//这里用new创建了一个数组，只能通过指针访问。</span></span><br></pre></td></tr></table></figure></p>
-<p>访问方式为<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">psome[<span class="number">0</span>] <span class="comment">//这种数组方式</span></span><br></pre></td></tr></table></figure></p>
-<p>或者<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*(psome+<span class="number">1</span>) <span class="comment">//指针的访问方式</span></span><br></pre></td></tr></table></figure></p>
-<h5 id="因为我是在处理生成一棵二叉树的时候，遇到这个问题。"><a href="#因为我是在处理生成一棵二叉树的时候，遇到这个问题。" class="headerlink" title="因为我是在处理生成一棵二叉树的时候，遇到这个问题。"></a>因为我是在处理生成一棵二叉树的时候，遇到这个问题。</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">int</span> value;</span><br><span class="line">  Node* left;</span><br><span class="line">  Node* right;  <span class="comment">//这里的指针需不需要=NULL。</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>然后用new运算符动态生成一个节点<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Node * temp = <span class="keyword">new</span> Node;</span><br></pre></td></tr></table></figure></p>
-<p>然后delete<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> temp;</span><br></pre></td></tr></table></figure></p>
-<h5 id="给定一个数组，然后生成一颗二叉树"><a href="#给定一个数组，然后生成一颗二叉树" class="headerlink" title="给定一个数组，然后生成一颗二叉树"></a>给定一个数组，然后生成一颗二叉树</h5><p><strong>give an array of integers to build a binary search tree.</strong><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">int</span> value;</span><br><span class="line">  Node* left;</span><br><span class="line">  Node* right;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreatTree</span><span class="params">(Node* P)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> <span class="built_in">array</span>[<span class="number">10</span>]=&#123;<span class="number">10</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">23</span>,<span class="number">94</span>,<span class="number">22</span>,<span class="number">75</span>,<span class="number">45</span>,<span class="number">33</span>,<span class="number">17</span>&#125;;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">  &#123;</span><br><span class="line">    Node* temp = <span class="keyword">new</span> Node;</span><br><span class="line">    creat(temp);  <span class="comment">//temp不能使用多次吧。</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-			</div>
-			<div class="p2 border-top">
-				<div class="clearfix">
-					<div class="left">
-						
-							<script type="text/javascript">
-								document.write('<a href="/tags/code/" class="muted h6 mb1 bold btn btn-outline '+chooseOne(colors)+'">code</a>');
-								//document.write('<span onclick="window.location=\'' + ' /tags/code/ ' + '\'" class="clickable h6 bold inline-block px1 '+chooseOne(colors)+' rounded">code</span>');
-							</script>
-						
-							<script type="text/javascript">
-								document.write('<a href="/tags/pointer/" class="muted h6 mb1 bold btn btn-outline '+chooseOne(colors)+'">pointer</a>');
-								//document.write('<span onclick="window.location=\'' + ' /tags/pointer/ ' + '\'" class="clickable h6 bold inline-block px1 '+chooseOne(colors)+' rounded">pointer</span>');
-							</script>
-						
-					</div>
-					<div class="ml2 right"><span class="h6 muted black">
-						<a class="link" href="/categories/code幻想曲/">code幻想曲</a>
-					 </span></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	
-</div>
-
-
 <div class="clearfix">
 	
 	

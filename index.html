@@ -274,69 +274,6 @@
 			<div class="m1 p2 white">
 				<div class="clearfix">
 					<div class="left">
-						<h1 class="h2 m0"><a href="/2018/03/18/article-3/" class="black">
-						HTML+css学习记录
-						</a></h1>
-					</div>
-					<div class="right"><span class="h6 muted black">
-						Mar 18 2018
-					</span></div>
-				</div>
-			</div>
-			<div class="p2 border-top">
-				<p>我将用这篇文档记录html+css过程。</p>
-<p>首先很感激我用到了最好的HTML教材《Head First with HTML &amp; css》。</p>
-<p>HTML框架</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>this is a html<span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"css.css"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is a html<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"light"</span>&gt;</span>HTML能够让内容很好地适用于网络，</span><br><span class="line">    css能让这些内容获得良好的样式，外加javascript这个优秀的脚本语言，</span><br><span class="line">    开创了互联网交互的先河。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>why js do it<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"lighter"</span>&gt;</span>我是被visualgo.net的数据结构交互震撼到了，</span><br><span class="line">    然后被d3.js的数据可视化深深吸引。与其与其没头没尾地学习javascript</span><br><span class="line">    不如从HTML+css开始学，然后进一步学习。再次感谢《Head First with HTML &amp; css》</span><br><span class="line">    让我的学习过程如此有趣。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>一些重要元素</p>
-<ul>
-<li><p>网页链接</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://hermesfish.github.io"</span>&gt;</span>hermesfish的链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>图片</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://p5kt0ilhh.bkt.clouddn.com/cats.jpg"</span></span></span><br><span class="line"><span class="tag"><span class="attr">alt</span>=<span class="string">"this is an image which has many cats and dogs."</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>列表</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>ShangHai, China<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>JiangSu, China<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>Tokyo, Japan<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>css样式<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span>,<span class="selector-tag">h2</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>: black;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">48px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span><span class="selector-class">.light</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>: blue;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.lighter</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>class(类)</li>
-<li>id</li>
-<li>盒模型</li>
-<li><div>元素</div></li>
-</ul>
-
-			</div>
-			<div class="p2 border-top">
-				<div class="clearfix">
-					<div class="left">
-						
-							<script type="text/javascript">
-								document.write('<a href="/tags/HTML/" class="muted h6 mb1 bold btn btn-outline '+chooseOne(colors)+'">HTML</a>');
-								//document.write('<span onclick="window.location=\'' + ' /tags/HTML/ ' + '\'" class="clickable h6 bold inline-block px1 '+chooseOne(colors)+' rounded">HTML</span>');
-							</script>
-						
-					</div>
-					<div class="ml2 right"><span class="h6 muted black">
-						<a class="link" href="/categories/code幻想曲/">code幻想曲</a>
-					 </span></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	
-</div>
-
-
-	<div class="m0 py2">
-	<div class="md-col-12">
-		<div class="overflow-hidden bg-white rounded">
-			<div class="m1 p2 white">
-				<div class="clearfix">
-					<div class="left">
 						<h1 class="h2 m0"><a href="/2018/03/16/article-2/" class="black">
 						哔哩哔哩弹幕
 						</a></h1>

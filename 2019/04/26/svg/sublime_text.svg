@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="448" height="448" viewBox="0 0 448 448">
   <defs>
     <linearGradient id="sublime-icon-a" x1="50%" x2="50%" y1="0%" y2="100%">
-      <stop offset="0%" stop-color="#4D4D4D"/>
-      <stop offset="100%" stop-color="#444"/>
+      <stop offset="0%" stop-color="#fff"/>
+      <stop offset="100%" stop-color="#fff"/>
     </linearGradient>
     <linearGradient id="sublime-icon-b" x1="55.117%" x2="63.68%" y1="69.542%" y2="26.578%">
       <stop offset="0%" stop-color="#FF9700"/>

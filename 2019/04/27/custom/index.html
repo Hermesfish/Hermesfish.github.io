@@ -50,115 +50,90 @@
 </div>
 
 			<div class="p0 col col-12">
-				
-<div class="mt2 mb2">
-	<span class="btn button-narrow">Archives</span>
-	<svg class="icon gray" data-icon="chevron-right"></svg>
-	<span class="btn button-narrow">15 posts</span>
-</div>
-<div class="mt2 mb2">
-	
-		<div class="col-12 bg-white rounded mb4">
-			<span class="btn block border-bottom muted">2018 <span class="h6 muted">(7)</span></span>
-			
-			<a href="/2018/03/13/article-1/" class="btn block border-bottom">课堂遐思
-				<span class="h6 muted black">
-					Mar 13 2018
-				</span>
-			</a>
-			
-			<a href="/2018/04/25/article-8/" class="btn block border-bottom">Flyme 7使用体验
-				<span class="h6 muted black">
-					Apr 25 2018
-				</span>
-			</a>
-			
-			<a href="/2018/03/16/article-2/" class="btn block border-bottom">哔哩哔哩弹幕
-				<span class="h6 muted black">
-					Mar 16 2018
-				</span>
-			</a>
-			
-			<a href="/2018/10/06/subpoem/" class="btn block border-bottom">秋日        ——里尔克
-				<span class="h6 muted black">
-					Oct 6 2018
-				</span>
-			</a>
-			
-			<a href="/2018/07/21/th-md/" class="btn block border-bottom">故事会
-				<span class="h6 muted black">
-					Jul 21 2018
-				</span>
-			</a>
-			
-			<a href="/2018/03/01/the-history-of-my-name/" class="btn block border-bottom">Hermesfish的由来
-				<span class="h6 muted black">
-					Mar 1 2018
-				</span>
-			</a>
-			
-			<a href="/2018/04/13/title-4/" class="btn block">Carbon插件——将代码变为图片
-				<span class="h6 muted black">
-					Apr 13 2018
-				</span>
-			</a>
-			
+				<div class="m0 py2">
+	<div class="md-col-12">
+		<div class="overflow-hidden bg-white rounded">
+			<div class="m1 p2 white">
+				<div class="clearfix">
+					<div class="left">
+						<h1 class="h2 m0"><a href="/2019/04/27/custom/" class="black">
+						
+						</a></h1>
+					</div>
+					<div class="right"><span class="h6 muted black">
+						Apr 27 2019
+					</span></div>
+				</div>
+			</div>
+			<div class="p2 border-top">
+				<!--custom css in custom.scss -->
+
+ <script type="text/javascript">
+    // 黑幕提示语
+    $('span.heimu').attr('title', '你知道得太多了');
+</script>
+
+ <script type="text/javascript">
+    // 多图显示 gp-列数
+    $('span[class^="gp-"]').each(function () {
+        var div_mulp = $(this);
+        if (div_mulp && div_mulp.attr('class')) {
+            var column_number = parseInt(div_mulp.attr('class').split('-')[1]);
+            var image = div_mulp.find('img');
+            if (image.size() > 0) {
+                div_mulp.removeClass()
+                    .addClass('post-gallery')
+                    .attr('itemscope', '')
+                    .attr('itemtype', 'http://schema.org/ImageGallery');
+                 image.each(function (index) {
+                    var modulo = index % column_number;
+                     if (modulo === 0) {
+                        content = $('<div class="post-gallery-row"></div>')
+                    }
+                    var image_src = $(this).attr('src');
+                    content.append('<a class="post-gallery-img fancybox"\n' +
+                        '                 href="' + image_src + '" rel="gallery_"\n' +
+                        '                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">\n' +
+                        '                <img src="' + image_src + '" itemprop="contentUrl"/>\n' +
+                        '              </a>');
+                     if (modulo === column_number - 1) {
+                        div_mulp.append(content)
+                    }
+                });
+                 var photo_size_modulo = image.size() % column_number;
+                if (photo_size_modulo > 0) {
+                    div_mulp.append(content);
+                }
+                image.remove();
+            }
+        }
+    });
+ </script> 
+			</div>
+			<div class="p2 border-top">
+				<div class="clearfix">
+					<div class="left">
+						
+					</div>
+					<div class="ml2 right"><span class="h6 muted black"> </span></div>
+				</div>
+			</div>
 		</div>
+	</div>
 	
-		<div class="col-12 bg-white rounded mb4">
-			<span class="btn block border-bottom muted">2019 <span class="h6 muted">(8)</span></span>
-			
-			<a href="/2019/04/27/custom/" class="btn block border-bottom">
-				<span class="h6 muted black">
-					Apr 27 2019
-				</span>
-			</a>
-			
-			<a href="/2019/01/27/feedcat/" class="btn block border-bottom">养猫
-				<span class="h6 muted black">
-					Jan 27 2019
-				</span>
-			</a>
-			
-			<a href="/2019/04/25/game/" class="btn block border-bottom">几款平台冒险游戏对比
-				<span class="h6 muted black">
-					Apr 25 2019
-				</span>
-			</a>
-			
-			<a href="/2019/04/21/life-1/" class="btn block border-bottom">最近的日常以及感想
-				<span class="h6 muted black">
-					Apr 21 2019
-				</span>
-			</a>
-			
-			<a href="/2019/02/15/skyscraper/" class="btn block border-bottom">商会大厦
-				<span class="h6 muted black">
-					Feb 15 2019
-				</span>
-			</a>
-			
-			<a href="/2019/04/26/svg/" class="btn block border-bottom">svg矢量图和一些图标
-				<span class="h6 muted black">
-					Apr 26 2019
-				</span>
-			</a>
-			
-			<a href="/2019/01/26/test/" class="btn block border-bottom">test
-				<span class="h6 muted black">
-					Jan 26 2019
-				</span>
-			</a>
-			
-			<a href="/2019/04/24/workflow/" class="btn block">捷径App
-				<span class="h6 muted black">
-					Apr 24 2019
-				</span>
-			</a>
-			
-		</div>
+	<div class="clearfix mt2">
+		
+		
+		<a href="/2019/04/26/svg/" class="right btn">
+			next: svg矢量图和一些图标
+			<svg class="icon" data-icon="chevron-right"></svg>
+		</a>
+		
+	</div>
+	
 	
 </div>
+
 
 			</div>
 		</div>
@@ -200,7 +175,24 @@
 	  })();
 	</script>
 	<noscript><p><img src="//insidious.sdapi.net/piwik.php?idsite=15" style="border:0;" alt="" /></p></noscript>
-	<!-- End Piwik Code --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+	<!-- End Piwik Code --><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 
 
 
